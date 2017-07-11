@@ -57,7 +57,7 @@ const protocol = await CDP({port: chrome.port});
 const pdfDir = path.normalize('./pdfs');
 const sjsDelay = 250;
 
-let sindex = 0, jurl;
+let sindex = 0, jurl, pdfpath;
 
 const {Page, Runtime} = protocol; // Destructure only what is needed from CDP
 await Promise.all([Page.enable(), Runtime.enable()]); // Then enable it
@@ -75,7 +75,7 @@ Page.loadEventFired(async () => {
   // Now Print
   const cpdf = await Page.printToPDF();
   sindex++;
-  let pdfpath = path.normalize(`./pdfs/p${sindex}_${jurl.value.ptitle}.pdf`);
+  pdfpath = path.join(pdfDir,`p${sindex}_${jurl.value.ptitle}.pdf`);
   fs.writeFile(pdfpath, cpdf.data, 'base64', (err) => {
     if (err) throw err;
     console.log('  PDF file has been saved');
