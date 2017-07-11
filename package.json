@@ -1,13 +1,14 @@
 {
-  "name": "printtester",
-  "version": "1.0.0",
-  "description": "testing wm prints",
+  "name": "chromeHeadlessPrinter",
+  "version": "0.4.0",
+  "description": "Script for the headless Chrome interface (v59+), to print list of urls to pdf",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Matt Irwin",
+  "author": "Matt Irwin <mattirwin.socal@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "chrome-launcher": "^0.3.1",
