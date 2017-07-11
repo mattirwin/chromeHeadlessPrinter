@@ -1,3 +1,4 @@
+// List of URLs to be printed, along with any follow up js to be executed on page load
 module.exports = [
   {
     'url':'https://www.google.com',
