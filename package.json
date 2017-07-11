@@ -1,0 +1,18 @@
+{
+  "name": "printtester",
+  "version": "1.0.0",
+  "description": "testing wm prints",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Irwin",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-launcher": "^0.3.1",
+    "chrome-remote-interface": "^0.24.0",
+    "colors": "^1.1.2",
+    "del": "^3.0.0"
+  }
+}
